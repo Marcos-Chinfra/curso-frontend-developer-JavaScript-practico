@@ -2,36 +2,36 @@ const menuEmail = document.querySelector('.navbar-email');
 const desktopMenu = document.querySelector('.desktop-menu');
 const menuHamIcon = document.querySelector('.menu');
 const menuCarritoIcon = document.querySelector('.navbar-shopping-cart');
-const  aside = document.querySelector('.product-detail');
+const  shoppingCartContainer = document.querySelector('#shoppingCartContainer');
 const mobileMenu = document.querySelector('.mobile-menu');
 const cardsContainer = document.querySelector('.cards-container');
 
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
 menuHamIcon.addEventListener('click', toggleMobileMenu);
-menuCarritoIcon.addEventListener('click', toggleCarritoAside);
+menuCarritoIcon.addEventListener('click', toggleShoppingCartContainer);
 
 function toggleDesktopMenu(){
-    const isAsideMenuClosed = aside.classList.contains('incative');
-    if(!isAsideMenuClosed){
-        aside.classList.add('inactive')
+    const isShoppingCartContainerClosed = shoppingCartContainer.classList.contains('incative');
+    if(!isShoppingCartContainerClosed){
+        shoppingCartContainer.classList.add('inactive')
     }
 
     desktopMenu.classList.toggle('inactive');
 }
 
 function toggleMobileMenu(){
-    const isAsideMenuClosed = aside.classList.contains('incative');
-    if(!isAsideMenuClosed){
-        aside.classList.add('inactive')
+    const isShoppingCartContainerClosed = shoppingCartContainer.classList.contains('incative');
+    if(!isShoppingCartContainerClosed){
+        shoppingCartContainer.classList.add('inactive')
     }
 
     mobileMenu.classList.toggle('inactive');
 }
 
-function toggleCarritoAside(){
+function toggleShoppingCartContainer(){
     const isMobileMenuClosed = mobileMenu.classList.contains('incative');
-    const isDesktopMenuClosed = aside.classList.contains('incative');
+    const isDesktopMenuClosed =  shoppingCartContainer.classList.contains('incative');
 
     if(!isDesktopMenuClosed){
         desktopMenu.classList.add('inactive')
@@ -41,7 +41,7 @@ function toggleCarritoAside(){
         mobileMenu.classList.add('inactive')
     }
 
-    aside.classList.toggle('inactive');
+    shoppingCartContainer.classList.toggle('inactive');
 }
 
 const productList = [];
